@@ -8,7 +8,12 @@ recipes_list = {
     'lunch',
     'dessert',
 }
-recipes_list = dict.fromkeys(recipes_list)
 ingredients = ['salad', 'cheese']
-tourte = Recipe("tourte", 2, 30, ingredients, "une tourte", "lunch")
-print(str(tourte))
+
+recipe_book = Book("Recipe book")
+pizza = Recipe("pizza", 2, 30, ['olives', 'cheese', "meat"], "A yummy pizza", "lunch")
+recipe_book.add_recipe(pizza)
+recipe = recipe_book.get_recipe_by_name('pizza')
+
+print("The added recipe:\n",recipe)
+print(str(pizza))
