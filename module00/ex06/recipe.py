@@ -54,7 +54,7 @@ def add_recipe(recipe, ingredients, meal, prep_time):
     i = 0
     while i < len(cookbook):
         i += 1
-    cookbook[recipe] = { 'ingredients': ingredients,
+    cookbook[recipe] = { 'ingredients': list(ingredients.split(' ')),
     'meal' : meal, 'prep_time': prep_time}
 
 def del_recipe(recipe):

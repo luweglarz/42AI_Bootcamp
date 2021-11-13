@@ -8,10 +8,7 @@ class Recipe:
             raise Exception("Error name")
         self.name = str(name)
         self.cooking_lvl = int(cooking_lvl)
-        if cooking_time.isdigit() or cooking_time == "":
-            self.cooking_time = int(cooking_time)
-        else:
-            raise Exception("Error cooking_time")
+        self.cooking_time = int(cooking_time)
         if ingredients:
             self.ingredients = list(ingredients)
         else:
@@ -20,5 +17,12 @@ class Recipe:
         self.recipe_type = str(recipe_type)
     
     def __str__(self):
-        text = self.name
+        text = "Recipe name: " + self.name + '\n'
+        text += "Recipe level: " + str(self.cooking_lvl) + '\n'
+        text += "Recipe time: " + str(self.cooking_time) + '\n'
+        text += "Ingredients: " + '\n'
+        for i in self.ingredients:
+            text += i + '\n'
+        text += "Recipe description: " + self.description + '\n'
+        text += "Recipe type: " + self.recipe_type
         return text
