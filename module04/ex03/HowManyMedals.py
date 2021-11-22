@@ -17,15 +17,15 @@ def HowManyMedals(df, name):
     for year in Participant['Year']:
         dictio[year] = dict(Participant[Participant['Year'] == year]['Medal'].value_counts())
         try:
-            Gcount += dictio[year]['Gold']
+            Gcount = dictio[year]['Gold']
         except:
             Gcount = 0
         try:
-            Scount += dictio[year]['Silver']
+            Scount = dictio[year]['Silver']
         except:
             Scount = 0
         try:
-            Bcount += dictio[year]['Bronze']
+            Bcount = dictio[year]['Bronze']
         except:
             Bcount = 0
         dictio[year] = dict(G=Gcount, S=Scount, B=Bcount)

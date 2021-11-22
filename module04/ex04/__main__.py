@@ -6,8 +6,7 @@ def main():
     load = Fl.load("./athlete_events.csv")
 
     sp = SpatioTemporalData(load)
-    sp.where(1896)
-    sp.when('Athina')
+    sp.when('Bucharest')
 
 if __name__ == "__main__":
     main()
