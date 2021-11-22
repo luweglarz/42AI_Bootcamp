@@ -7,5 +7,4 @@ def main():
     Fl.display(load, 6)
 
 if __name__ == "__main__":
-    print(__name__)
     main()
